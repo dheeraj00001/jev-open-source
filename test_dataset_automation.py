@@ -305,16 +305,8 @@ def build_test_dataset(
 
     # Banking77 — 300 from official test split
     banking_test = load_dataset("mteb/banking77", split="test")
-    banking_labels = [banking_test.features["label_text"].names[i] if hasattr(banking_test.features["label_text"], "names")
-                      else banking_test[i]["label_text"] for i in range(77)] if hasattr(banking_test, "features") and "label_text" in banking_test.features else None
-    if not banking_labels:
-        # Build map
-        lmap = {}
-        for ex in banking_test:
-            lmap[ex["label"]] = ex["label_text"]
-            if len(lmap) == 77:
-                break
-        banking_labels = [lmap[i] for i in range(len(lmap))]
+    banking_label_map = {ex["label"]: ex["label_text"] for ex in banking_test}
+    banking_labels = [banking_label_map[i] for i in range(len(banking_label_map))]
 
     add_test_dataset(
         "Banking77 (test split)",
