@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+system_one_model/
+*.log
+*.pt
+*.safetensors
+*.bin
+*.jsonl
+*.pdf
