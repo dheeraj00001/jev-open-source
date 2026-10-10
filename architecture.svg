@@ -1,0 +1,769 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 1260" width="1680" height="1260">
+  <defs>
+    <style>
+      .title-text { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #0f172a; }
+      .subtitle-text { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 12px; fill: #475569; }
+      
+      .badge-text { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 10px; font-weight: bold; }
+      
+      .stage-tag { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; text-transform: uppercase; }
+      .stage-title { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 13.5px; font-weight: bold; fill: #0f172a; }
+      .stage-desc { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 10px; fill: #64748b; }
+      
+      .card-title { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 11.5px; font-weight: bold; fill: #1e293b; }
+      .card-subtitle { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 9.5px; fill: #64748b; }
+      
+      .label-bold { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 9.5px; font-weight: bold; fill: #0f172a; }
+      .label-medium { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 9px; font-weight: 500; fill: #334155; }
+      .body-sm { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 9px; fill: #334155; }
+      .body-xs { font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 8px; fill: #64748b; }
+      .mono-sm { font-family: 'Liberation Mono', 'DejaVu Sans Mono', monospace; font-size: 9px; fill: #0f172a; }
+      .mono-xs { font-family: 'Liberation Mono', 'DejaVu Sans Mono', monospace; font-size: 8px; fill: #475569; }
+      
+      .math-title { font-family: 'Liberation Serif', 'DejaVu Serif', 'Times New Roman', serif; font-size: 12px; font-weight: bold; font-style: italic; }
+      .math-body { font-family: 'Liberation Serif', 'DejaVu Serif', 'Times New Roman', serif; font-size: 11.5px; font-style: italic; }
+      
+      .panel-border { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.2; rx: 8px; }
+      .panel-header { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+      
+      .flow-arrow { stroke: #475569; stroke-width: 1.5; fill: none; }
+      .flow-arrow-blue { stroke: #2563eb; stroke-width: 1.5; fill: none; }
+      .flow-arrow-amber { stroke: #d97706; stroke-width: 1.5; fill: none; }
+      .flow-arrow-emerald { stroke: #059669; stroke-width: 1.5; fill: none; }
+      .flow-arrow-red { stroke: #dc2626; stroke-width: 1.5; fill: none; }
+    </style>
+
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563EB" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#D97706" />
+    </marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626" />
+    </marker>
+
+    <pattern id="diag-hatch-red" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#FCA5A5" stroke-width="1.5" />
+    </pattern>
+    <pattern id="dot-bg" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.75" fill="#E2E8F0" />
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1680" height="1260" fill="#FAFAFA" />
+  <rect width="1680" height="1260" fill="url(#dot-bg)" />
+
+  <!-- ========================================================================= -->
+  <!-- TOP BANNER: TITLE AND RESEARCH BENCHMARK BADGES -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 24)">
+    <text x="0" y="22" class="title-text">JEV Open Source: System One Architecture &amp; Operational Data Flow</text>
+    <text x="0" y="42" class="subtitle-text">Non-Autoregressive Decision Engine with Excised Language Model Head &amp; Dual-Mode Decision Heads</text>
+
+    <!-- Top Badges -->
+    <g transform="translate(930, 4)">
+      <!-- Badge 1: Backbone -->
+      <g transform="translate(0, 0)">
+        <rect width="165" height="28" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="0.8" />
+        <circle cx="12" cy="14" r="3.5" fill="#2563EB" />
+        <text x="22" y="18" class="badge-text" fill="#1E293B">Backbone: Qwen2.5-1.5B</text>
+      </g>
+      <!-- Badge 2: Latency -->
+      <g transform="translate(175, 0)">
+        <rect width="160" height="28" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="0.8" />
+        <circle cx="12" cy="14" r="3.5" fill="#059669" />
+        <text x="22" y="18" class="badge-text" fill="#065F46">Latency: 15–35 ms / pass</text>
+      </g>
+      <!-- Badge 3: VRAM -->
+      <g transform="translate(345, 0)">
+        <rect width="160" height="28" rx="4" fill="#FEF3C7" stroke="#FDE68A" stroke-width="0.8" />
+        <circle cx="12" cy="14" r="3.5" fill="#D97706" />
+        <text x="22" y="18" class="badge-text" fill="#92400E">Footprint: &lt; 2.0 GB VRAM</text>
+      </g>
+      <!-- Badge 4: Mode -->
+      <g transform="translate(515, 0)">
+        <rect width="155" height="28" rx="4" fill="#F3E8FF" stroke="#E9D5FF" stroke-width="0.8" />
+        <circle cx="12" cy="14" r="3.5" fill="#9333EA" />
+        <text x="22" y="18" class="badge-text" fill="#6B21A8">Mode: Prefill (Zero AR)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Horizontal Divider -->
+  <line x1="40" y1="74" x2="1640" y2="74" stroke="#CBD5E1" stroke-width="1" />
+
+  <!-- ========================================================================= -->
+  <!-- STAGE 1: INPUT INGESTION & DELIMITER SCHEMA TOKENIZATION -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 86)">
+    <rect width="1600" height="154" class="panel-border" />
+    <path d="M 0 8 Q 0 0 8 0 L 1592 0 Q 1600 0 1600 8 L 1600 28 L 0 28 Z" class="panel-header" />
+    
+    <text x="14" y="19" class="stage-tag" fill="#2563EB">Stage 1</text>
+    <text x="80" y="19" class="stage-title">Input Ingestion &amp; Delimiter Schema Tokenization</text>
+    <text x="1585" y="19" class="stage-desc" text-anchor="end">Serializes heterogeneous state, query type, and dynamic candidate pools into structured token streams</text>
+
+    <!-- Sub-panel 1.1: Inputs -->
+    <g transform="translate(14, 38)">
+      <rect width="365" height="102" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="18" class="card-title">1.1 Heterogeneous Inputs</text>
+
+      <g transform="translate(10, 26)">
+        <!-- State Box -->
+        <g transform="translate(0, 0)">
+          <rect width="105" height="66" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+          <text x="8" y="16" class="label-bold">State Context S</text>
+          <text x="8" y="30" class="body-xs">Text / JSON State</text>
+          <text x="8" y="44" class="mono-xs">&lt;doc&gt;...</text>
+          <text x="8" y="56" class="mono-xs">metadata, tables</text>
+        </g>
+        <!-- Query Box -->
+        <g transform="translate(112, 0)">
+          <rect width="115" height="66" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+          <text x="8" y="16" class="label-bold">Typed Query Q</text>
+          <text x="8" y="30" class="body-xs">Choice | Noul | Score</text>
+          <text x="8" y="44" class="body-xs" fill="#059669" font-weight="bold">Choice: route?</text>
+          <text x="8" y="56" class="body-xs" fill="#D97706" font-weight="bold">Noul: verify?</text>
+        </g>
+        <!-- Candidates Box -->
+        <g transform="translate(234, 0)">
+          <rect width="110" height="66" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+          <text x="8" y="16" class="label-bold">Candidates C</text>
+          <text x="8" y="30" class="body-xs">Dynamic K Options</text>
+          <text x="8" y="44" class="mono-xs" fill="#2563EB">[0] "billing"</text>
+          <text x="8" y="56" class="mono-xs" fill="#2563EB">[1] "support"</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Arrow 1.1 -> 1.2 -->
+    <path d="M 384 89 L 412 89" class="flow-arrow" marker-end="url(#arrow-slate)" />
+
+    <!-- Sub-panel 1.2: Delimiter Serialization -->
+    <g transform="translate(418, 38)">
+      <rect width="770" height="102" rx="5" fill="#F0F7FF" stroke="#BAE6FD" stroke-width="1" />
+      <text x="14" y="18" class="card-title" fill="#0369A1">1.2 DecisionDataCollator: Delimiter Stream Serialization &amp; Span Mapping</text>
+
+      <!-- Token Stream Chips -->
+      <g transform="translate(14, 28)">
+        <g transform="translate(0, 0)">
+          <rect width="128" height="26" rx="4" fill="#FFFFFF" stroke="#93C5FD" stroke-width="0.8" />
+          <text x="8" y="17" class="mono-sm" fill="#1E40AF">&lt;|im_start|&gt;system</text>
+        </g>
+        <g transform="translate(134, 0)">
+          <rect width="150" height="26" rx="4" fill="#FFFFFF" stroke="#93C5FD" stroke-width="0.8" />
+          <text x="8" y="17" class="mono-sm" fill="#0369A1">&lt;|im_start|&gt;state json</text>
+        </g>
+        <g transform="translate(290, 0)">
+          <rect width="165" height="26" rx="4" fill="#FFFFFF" stroke="#93C5FD" stroke-width="0.8" />
+          <text x="8" y="17" class="mono-sm" fill="#0D9488">&lt;|im_start|&gt;question t</text>
+        </g>
+        <g transform="translate(461, 0)">
+          <rect width="145" height="26" rx="4" fill="#FFFFFF" stroke="#93C5FD" stroke-width="0.8" />
+          <text x="8" y="17" class="mono-sm" fill="#7C3AED">[0] opt_0 [1] opt_1</text>
+        </g>
+        <g transform="translate(612, 0)">
+          <rect width="130" height="26" rx="4" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.2" />
+          <circle cx="12" cy="13" r="3" fill="#D97706" />
+          <text x="20" y="17" class="mono-sm" font-weight="bold" fill="#B45309">&lt;|im_start|&gt;decision</text>
+        </g>
+      </g>
+
+      <!-- Offsets and pointer -->
+      <g transform="translate(14, 62)">
+        <rect width="365" height="30" rx="3" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.8" />
+        <text x="8" y="13" class="label-bold">Candidate Char-to-Token Span Extractor</text>
+        <text x="8" y="24" class="body-xs">Maps char offsets [s_k, e_k] → token indices [t_start(k), t_end(k)]</text>
+
+        <rect x="375" y="0" width="365" height="30" rx="3" fill="#FFFBEB" stroke="#FDE68A" stroke-width="0.8" />
+        <text x="8" y="13" class="label-bold" fill="#92400E" transform="translate(375, 0)">Terminal Decision Token Indexing</text>
+        <text x="8" y="24" class="mono-xs" fill="#B45309" transform="translate(375, 0)">decide_tok_idx = seq_len - 1 (points to terminal decision marker)</text>
+      </g>
+    </g>
+
+    <!-- Arrow 1.2 -> 1.3 -->
+    <path d="M 1192 89 L 1220 89" class="flow-arrow" marker-end="url(#arrow-slate)" />
+
+    <!-- Sub-panel 1.3: Collated Tensors Output -->
+    <g transform="translate(1226, 38)">
+      <rect width="360" height="102" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="18" class="card-title">1.3 Collated Batch Tensors</text>
+
+      <g transform="translate(14, 28)">
+        <text x="0" y="14" class="mono-sm">input_ids:       [B, L_max] ∈ ℤ (token indices)</text>
+        <text x="0" y="32" class="mono-sm">attention_mask:  [B, L_max] ∈ {0, 1}</text>
+        <text x="0" y="50" class="mono-sm">decide_tok_idx:  [B] ∈ ℕ (terminal slice pos)</text>
+        <text x="0" y="68" class="mono-sm">candidate_spans: [B, K, 2] (start/end token bounds)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flow Connector: Stage 1 -> Stage 2 -->
+  <path d="M 840 240 L 840 268" class="flow-arrow" marker-end="url(#arrow-slate)" />
+  <rect x="735" y="246" width="210" height="18" rx="3" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+  <text x="840" y="259" class="label-bold" fill="#475569" text-anchor="middle">Batched Input Tokens [B, L_max]</text>
+
+  <!-- ========================================================================= -->
+  <!-- STAGE 2: TRANSFORMER BACKBONE & LM HEAD EXCISION -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 272)">
+    <rect width="1600" height="190" class="panel-border" />
+    <path d="M 0 8 Q 0 0 8 0 L 1592 0 Q 1600 0 1600 8 L 1600 28 L 0 28 Z" class="panel-header" />
+    
+    <text x="14" y="19" class="stage-tag" fill="#2563EB">Stage 2</text>
+    <text x="80" y="19" class="stage-title">Transformer Backbone Execution &amp; Generative LM Head Excision</text>
+    <text x="1585" y="19" class="stage-desc" text-anchor="end">Single forward prefill pass excising vocabulary projection to reclaim ~778 MB VRAM and eliminate autoregression</text>
+
+    <!-- Sub-panel 2.1: Backbone -->
+    <g transform="translate(14, 38)">
+      <rect width="1035" height="138" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+      <text x="14" y="18" class="card-title">2.1 Foundation Backbone: Qwen2.5-1.5B-Instruct (4-bit NF4 Quantization + LoRA Adapters)</text>
+      <text x="1020" y="18" class="card-subtitle" text-anchor="end">28 Layers · d_model = 1536 · GQA 12:2 · Context: 32,768</text>
+
+      <g transform="translate(12, 28)">
+        <!-- QLoRA Info Box -->
+        <g transform="translate(0, 0)">
+          <rect width="190" height="98" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+          <rect width="190" height="20" rx="4" fill="#F1F5F9" />
+          <text x="8" y="14" class="label-bold" fill="#334155">Parameter-Efficient Fine-Tuning</text>
+          <text x="8" y="34" class="body-sm">• Base: 4-bit NF4 Quantization (W_0)</text>
+          <text x="8" y="48" class="body-sm">• LoRA Rank: r = 32, α = 64</text>
+          <text x="8" y="62" class="body-sm">• Modules: q, k, v, o, gate, up, down</text>
+          <text x="8" y="76" class="body-sm">• Optimizer: PagedAdamW8bit</text>
+          <text x="8" y="90" class="body-sm" fill="#059669" font-weight="bold">✓ Trainable: 18.4M / 1.54B (1.2%)</text>
+        </g>
+
+        <!-- Arrow -->
+        <path d="M 196 49 L 218 49" class="flow-arrow" marker-end="url(#arrow-slate)" />
+
+        <!-- Layer 1 -->
+        <g transform="translate(222, 0)">
+          <rect width="145" height="98" rx="4" fill="#FFFFFF" stroke="#93C5FD" stroke-width="0.8" />
+          <rect width="145" height="20" rx="4" fill="#EFF6FF" />
+          <text x="10" y="14" class="label-bold" fill="#1E40AF">Transformer Layer 1</text>
+          <text x="10" y="34" class="body-sm">• RMSNorm (pre-attn)</text>
+          <text x="10" y="48" class="body-sm">• FlashAttention-2 / GQA</text>
+          <text x="10" y="62" class="body-sm">• RoPE (θ = 1,000,000)</text>
+          <text x="10" y="76" class="body-sm">• SwiGLU FFN (d=8960)</text>
+          <text x="10" y="90" class="body-sm" fill="#2563EB">Residual: x + Δx</text>
+        </g>
+
+        <!-- Ellipsis Arrow -->
+        <path d="M 372 49 L 400 49" class="flow-arrow" marker-end="url(#arrow-slate)" />
+        <text x="386" y="44" font-size="14px" fill="#64748B" text-anchor="middle">···</text>
+
+        <!-- Layer 28 -->
+        <g transform="translate(406, 0)">
+          <rect width="145" height="98" rx="4" fill="#FFFFFF" stroke="#93C5FD" stroke-width="0.8" />
+          <rect width="145" height="20" rx="4" fill="#EFF6FF" />
+          <text x="10" y="14" class="label-bold" fill="#1E40AF">Transformer Layer 28</text>
+          <text x="10" y="34" class="body-sm">• RMSNorm (final)</text>
+          <text x="10" y="48" class="body-sm">• Deep Semantic Mixing</text>
+          <text x="10" y="62" class="body-sm">• Terminal token state</text>
+          <text x="10" y="76" class="body-sm">  contextualized</text>
+          <text x="10" y="90" class="body-sm" fill="#2563EB">Emits: H [B, L, 1536]</text>
+        </g>
+
+        <!-- Arrow -->
+        <path d="M 556 49 L 578 49" class="flow-arrow" marker-end="url(#arrow-slate)" />
+
+        <!-- 3D Tensor Box -->
+        <g transform="translate(584, 0)">
+          <rect width="215" height="98" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+          <text x="10" y="16" class="card-title">Hidden States Tensor H</text>
+          
+          <!-- Isometric Tensor Cube -->
+          <g transform="translate(14, 30)">
+            <rect x="0" y="10" width="75" height="42" fill="#DBEAFE" stroke="#2563EB" stroke-width="1" />
+            <polygon points="0,10 22,0 97,0 75,10" fill="#BFDBFE" stroke="#2563EB" stroke-width="1" />
+            <polygon points="75,10 97,0 97,42 75,52" fill="#93C5FD" stroke="#2563EB" stroke-width="1" />
+            <text x="37" y="35" font-size="8px" font-weight="bold" fill="#1E40AF" text-anchor="middle">Seq_Len (L)</text>
+            <text x="90" y="24" font-size="7px" fill="#1E3A8A">d=1536</text>
+            <text x="-4" y="34" font-size="7px" fill="#1E3A8A" text-anchor="end">Batch</text>
+          </g>
+
+          <text x="120" y="44" class="math-body" font-size="11.5px" fill="#0F172A">H ∈ ℝ^(B×L×d)</text>
+          <text x="120" y="62" class="body-xs">Single Prefill Pass</text>
+          <text x="120" y="76" class="body-sm" fill="#059669" font-weight="bold">Zero AR Latency</text>
+        </g>
+
+        <!-- Speedup Callout -->
+        <g transform="translate(810, 0)">
+          <rect width="210" height="98" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="0.8" />
+          <text x="10" y="16" class="card-title" fill="#065F46">Execution Comparison</text>
+          <text x="10" y="34" class="body-sm" fill="#047857">Standard Generative LLM:</text>
+          <text x="10" y="48" class="body-xs">50–200 decode steps (500–3000 ms)</text>
+          <text x="10" y="66" class="body-sm" fill="#065F46" font-weight="bold">JEV System One Engine:</text>
+          <text x="10" y="80" class="body-sm" fill="#059669" font-weight="bold">1 forward prefill step (15–35 ms)</text>
+          <text x="10" y="93" class="body-xs" fill="#047857" font-weight="bold">⚡ &gt; 25× End-to-End Speedup</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Sub-panel 2.2: Excised Head -->
+    <g transform="translate(1060, 38)">
+      <rect width="526" height="138" rx="5" fill="#FEF2F2" stroke="#FECACA" stroke-width="1" />
+      <text x="14" y="18" class="card-title" fill="#991B1B">2.2 Excised Generative Head: nn.Identity() [Reclaiming ~778 MB VRAM]</text>
+
+      <g transform="translate(12, 28)">
+        <!-- Excised Projection Matrix -->
+        <g transform="translate(0, 0)">
+          <rect width="155" height="98" rx="4" fill="url(#diag-hatch-red)" stroke="#EF4444" stroke-width="1.2" />
+          <rect x="8" y="12" width="139" height="74" rx="3" fill="#FFFFFF" fill-opacity="0.9" stroke="#DC2626" stroke-width="0.8" />
+          
+          <line x1="8" y1="12" x2="147" y2="86" stroke="#DC2626" stroke-width="1.8" />
+          <line x1="8" y1="86" x2="147" y2="12" stroke="#DC2626" stroke-width="1.8" />
+          
+          <text x="77" y="36" class="label-bold" fill="#991B1B" text-anchor="middle">Standard LM Head</text>
+          <text x="77" y="50" class="mono-sm" fill="#DC2626" text-anchor="middle">W_lm: 1536 → 151,936</text>
+          <rect x="32" y="58" width="90" height="18" rx="2" fill="#DC2626" />
+          <text x="77" y="71" class="label-bold" fill="#FFFFFF" text-anchor="middle">EXCISED</text>
+        </g>
+
+        <!-- Arrow -->
+        <path d="M 160 49 L 186 49" class="flow-arrow-red" marker-end="url(#arrow-red)" />
+
+        <!-- Replacement Component -->
+        <g transform="translate(190, 0)">
+          <rect width="130" height="98" rx="4" fill="#FFFFFF" stroke="#059669" stroke-width="1.2" />
+          <rect width="130" height="20" rx="4" fill="#ECFDF5" />
+          <text x="65" y="14" class="label-bold" fill="#065F46" text-anchor="middle">Replaced With</text>
+          <text x="65" y="44" class="mono-sm" font-size="12px" font-weight="bold" fill="#047857" text-anchor="middle">nn.Identity()</text>
+          <text x="65" y="62" class="body-sm" fill="#059669" text-anchor="middle">Pass-through logits</text>
+          <text x="65" y="78" class="body-xs" fill="#065F46" font-weight="bold" text-anchor="middle">Saves 151,936 GEMM</text>
+        </g>
+
+        <!-- Callout list -->
+        <g transform="translate(330, 0)">
+          <rect width="170" height="98" rx="4" fill="#FFFFFF" stroke="#FECACA" stroke-width="0.8" />
+          <text x="10" y="16" class="label-bold" fill="#991B1B">Architectural Gains</text>
+          <text x="10" y="32" class="body-sm">• Reclaims ~778 MB VRAM</text>
+          <text x="10" y="48" class="body-sm">• Total Footprint &lt; 2.0 GB</text>
+          <text x="10" y="64" class="body-sm">• Trains on RTX 2050 (4GB)</text>
+          <text x="10" y="80" class="body-sm">• Zero token prior bias</text>
+          <text x="10" y="93" class="body-sm" fill="#059669" font-weight="bold">✓ Zero JSON parsing bugs</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flow Connector: Stage 2 -> Stage 3 -->
+  <path d="M 520 462 L 520 488" class="flow-arrow" marker-end="url(#arrow-slate)" />
+  <rect x="415" y="468" width="210" height="18" rx="3" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+  <text x="520" y="480" class="label-bold" fill="#475569" text-anchor="middle">Full Context States H [B, L, 1536]</text>
+
+  <!-- ========================================================================= -->
+  <!-- STAGE 3: LATENT FEATURE ROUTING & SLICING -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 492)">
+    <rect width="1600" height="88" class="panel-border" />
+    <path d="M 0 8 Q 0 0 8 0 L 1592 0 Q 1600 0 1600 8 L 1600 24 L 0 24 Z" class="panel-header" />
+    
+    <text x="14" y="17" class="stage-tag" fill="#059669">Stage 3</text>
+    <text x="80" y="17" class="stage-title">Latent Feature Slicing &amp; Span Representation Pooling</text>
+    <text x="1585" y="17" class="stage-desc" text-anchor="end">Extracts terminal decision token embedding and aggregates candidate option token spans via mean pooling</text>
+
+    <!-- Sub-panel 3.1: Terminal Decision Vector -->
+    <g transform="translate(14, 30)">
+      <rect width="775" height="50" rx="4" fill="#FEFCE8" stroke="#FDE047" stroke-width="1" />
+      <text x="12" y="16" class="card-title" fill="#92400E">3.1 Terminal Decision Vector Extraction</text>
+      <text x="12" y="34" class="math-body" font-size="12px" fill="#78350F">h_decide = H[:, decide_tok_idx, :] ∈ ℝ^(1 × 1536)</text>
+      <text x="360" y="34" class="body-xs" fill="#92400E">(Contextual representation at terminal marker &lt;|im_start|&gt;decision)</text>
+
+      <g transform="translate(630, 12)">
+        <rect width="130" height="26" rx="3" fill="#FFFFFF" stroke="#D97706" stroke-width="1" />
+        <line x1="26" y1="0" x2="26" y2="26" stroke="#FDE68A" stroke-width="1" />
+        <line x1="52" y1="0" x2="52" y2="26" stroke="#FDE68A" stroke-width="1" />
+        <line x1="78" y1="0" x2="78" y2="26" stroke="#FDE68A" stroke-width="1" />
+        <line x1="104" y1="0" x2="104" y2="26" stroke="#FDE68A" stroke-width="1" />
+        <text x="65" y="17" class="label-bold" fill="#92400E" text-anchor="middle">h_decide [1, 1536]</text>
+      </g>
+    </g>
+
+    <!-- Sub-panel 3.2: Candidate Span Pooling -->
+    <g transform="translate(805, 30)">
+      <rect width="780" height="50" rx="4" fill="#F0F7FF" stroke="#BAE6FD" stroke-width="1" />
+      <text x="12" y="16" class="card-title" fill="#0369A1">3.2 Candidate Span Token Pooling (Dynamic K Options)</text>
+      <text x="12" y="32" class="math-body" font-size="11px" fill="#0C4A6E">e_k = MeanPool(H[:, t_start(k) : t_end(k), :]) ∈ ℝ^(1536), k ∈ {0, ..., K-1}</text>
+      <text x="12" y="44" class="body-xs" fill="#0369A1">Candidate Keys Matrix E_cands = [e_0; e_1; ...; e_K-1] ∈ ℝ^(K × 1536)</text>
+
+      <g transform="translate(640, 6)">
+        <rect y="0" width="125" height="10" rx="2" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8" />
+        <text x="62" y="8" font-size="7px" fill="#0369A1" text-anchor="middle">e_0 [1, 1536]</text>
+        <rect y="13" width="125" height="10" rx="2" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8" />
+        <text x="62" y="21" font-size="7px" fill="#0369A1" text-anchor="middle">e_1 [1, 1536]</text>
+        <rect y="26" width="125" height="10" rx="2" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8" />
+        <text x="62" y="34" font-size="7px" fill="#0369A1" text-anchor="middle">... e_K-1 [1, 1536]</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flow Connectors: Stage 3 -> Stage 4 -->
+  <path d="M 400 580 L 400 608" class="flow-arrow" marker-end="url(#arrow-slate)" />
+  <path d="M 1200 580 L 1200 608" class="flow-arrow" marker-end="url(#arrow-slate)" />
+  
+  <rect x="325" y="588" width="150" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+  <text x="400" y="600" class="label-bold" fill="#475569" text-anchor="middle">h_decide [1, 1536]</text>
+
+  <rect x="1110" y="588" width="180" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+  <text x="1200" y="600" class="label-bold" fill="#475569" text-anchor="middle">h_decide &amp; E_cands [K, 1536]</text>
+
+  <!-- ========================================================================= -->
+  <!-- STAGE 4: DUAL-MODE DECISION HEADS -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 612)">
+    <rect width="1600" height="310" class="panel-border" />
+    <path d="M 0 8 Q 0 0 8 0 L 1592 0 Q 1600 0 1600 8 L 1600 28 L 0 28 Z" class="panel-header" />
+    
+    <text x="14" y="19" class="stage-tag" fill="#7C3AED">Stage 4</text>
+    <text x="80" y="19" class="stage-title">Dual-Mode Hybrid Decision Heads (Static Invariant Anchors + Dynamic Pointer)</text>
+    <text x="1585" y="19" class="stage-desc" text-anchor="end">Decouples invariant semantic categories from unbounded in-context candidates</text>
+
+    <!-- COLUMN A: MODE A (STATIC PROTOTYPES) -->
+    <g transform="translate(14, 38)">
+      <rect width="775" height="260" rx="5" fill="#FEFCE8" stroke="#FDE047" stroke-width="1" />
+      <text x="14" y="18" class="card-title" fill="#92400E">Mode A: Static Linear Prototypes (Semantically Invariant Primitives)</text>
+      <text x="760" y="18" class="card-subtitle" fill="#78350F" text-anchor="end">Permanent semantic anchors</text>
+
+      <!-- Branch A1: NOUL -->
+      <g transform="translate(14, 30)">
+        <rect width="747" height="105" rx="5" fill="#FFFFFF" stroke="#FDE68A" stroke-width="0.8" />
+        <rect width="747" height="20" rx="5" fill="#FEF3C7" />
+        <text x="10" y="14" class="label-bold" fill="#92400E">Branch A1: Noul Prototype (Calibrated Binary Verification / Grounding)</text>
+
+        <g transform="translate(10, 28)">
+          <!-- Box 1: h_decide -->
+          <g transform="translate(0, 10)">
+            <rect width="75" height="38" rx="3" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8" />
+            <text x="37" y="18" class="math-body" fill="#0F172A" text-anchor="middle">h_decide</text>
+            <text x="37" y="30" class="body-xs" text-anchor="middle">[1, 1536]</text>
+          </g>
+
+          <path d="M 78 29 L 98 29" class="flow-arrow-amber" marker-end="url(#arrow-amber)" />
+
+          <!-- Box 2: W_noul -->
+          <g transform="translate(102, 6)">
+            <rect width="95" height="46" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1" />
+            <text x="47" y="16" class="label-bold" fill="#92400E" text-anchor="middle">W_noul</text>
+            <text x="47" y="28" class="math-body" font-size="10px" fill="#B45309" text-anchor="middle">ℝ^(2 × 1536) + b</text>
+            <text x="47" y="40" class="body-xs" fill="#92400E" text-anchor="middle">[0: No, 1: Yes]</text>
+          </g>
+
+          <path d="M 200 29 L 220 29" class="flow-arrow-amber" marker-end="url(#arrow-amber)" />
+
+          <!-- Box 3: Logits -->
+          <g transform="translate(224, 10)">
+            <rect width="70" height="38" rx="3" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8" />
+            <text x="35" y="18" class="label-bold" fill="#1E293B" text-anchor="middle">Logits z</text>
+            <text x="35" y="30" class="body-xs" text-anchor="middle">[z_0, z_1]</text>
+          </g>
+
+          <path d="M 297 29 L 317 29" class="flow-arrow-amber" marker-end="url(#arrow-amber)" />
+
+          <!-- Box 4: Temp Scaler -->
+          <g transform="translate(321, 6)">
+            <rect width="115" height="46" rx="3" fill="#FEF3C7" stroke="#F59E0B" stroke-width="0.8" />
+            <text x="57" y="15" class="label-bold" fill="#92400E" text-anchor="middle">Temperature Scaler</text>
+            <text x="57" y="28" class="math-body" font-size="10.5px" fill="#78350F" text-anchor="middle">τ_noul = 1.0829</text>
+            <text x="57" y="40" class="body-xs" fill="#B45309" text-anchor="middle">Softmax(z / τ)</text>
+          </g>
+
+          <path d="M 439 29 L 459 29" class="flow-arrow-emerald" marker-end="url(#arrow-emerald)" />
+
+          <!-- Box 5: Posterior Truth -->
+          <g transform="translate(463, 6)">
+            <rect width="110" height="46" rx="3" fill="#ECFDF5" stroke="#10B981" stroke-width="1" />
+            <text x="55" y="15" class="label-bold" fill="#065F46" text-anchor="middle">Posterior Truth</text>
+            <text x="55" y="29" class="math-body" font-size="12px" fill="#047857" text-anchor="middle">P(Yes) ∈ [0, 1]</text>
+            <text x="55" y="41" class="body-xs" fill="#059669" text-anchor="middle">Calibrated ECE: 0.052</text>
+          </g>
+
+          <!-- Callout: Thresholding -->
+          <g transform="translate(582, 4)">
+            <rect width="145" height="50" rx="3" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.8" />
+            <text x="8" y="13" class="label-bold">Dynamic Thresholding:</text>
+            <text x="8" y="25" class="body-xs">Single Noul default: T = 0.50</text>
+            <text x="8" y="36" class="body-xs" fill="#DC2626" font-weight="bold">Multi-label tuned: T = 0.82</text>
+            <text x="8" y="47" class="body-xs" fill="#059669" font-weight="bold">F1 jump: 0.499 → 0.748</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Branch A2: SCORE -->
+      <g transform="translate(14, 145)">
+        <rect width="747" height="105" rx="5" fill="#FFFFFF" stroke="#FDE68A" stroke-width="0.8" />
+        <rect width="747" height="20" rx="5" fill="#FEF3C7" />
+        <text x="10" y="14" class="label-bold" fill="#92400E">Branch A2: Score Ordinal Anchor (Metric-Aware Rubric Levels L ∈ [2, 10])</text>
+
+        <g transform="translate(10, 28)">
+          <!-- Box 1: h_decide -->
+          <g transform="translate(0, 10)">
+            <rect width="75" height="38" rx="3" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8" />
+            <text x="37" y="18" class="math-body" fill="#0F172A" text-anchor="middle">h_decide</text>
+            <text x="37" y="30" class="body-xs" text-anchor="middle">[1, 1536]</text>
+          </g>
+
+          <path d="M 78 29 L 98 29" class="flow-arrow-amber" marker-end="url(#arrow-amber)" />
+
+          <!-- Box 2: W_score -->
+          <g transform="translate(102, 6)">
+            <rect width="95" height="46" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1" />
+            <text x="47" y="16" class="label-bold" fill="#92400E" text-anchor="middle">W_score</text>
+            <text x="47" y="28" class="math-body" font-size="10px" fill="#B45309" text-anchor="middle">ℝ^(10 × 1536) + b</text>
+            <text x="47" y="40" class="body-xs" fill="#92400E" text-anchor="middle">Active levels L masked</text>
+          </g>
+
+          <path d="M 200 29 L 220 29" class="flow-arrow-amber" marker-end="url(#arrow-amber)" />
+
+          <!-- Box 3: Temp Scaler -->
+          <g transform="translate(224, 6)">
+            <rect width="105" height="46" rx="3" fill="#FEF3C7" stroke="#F59E0B" stroke-width="0.8" />
+            <text x="52" y="15" class="label-bold" fill="#92400E" text-anchor="middle">Temperature Scaler</text>
+            <text x="52" y="28" class="math-body" font-size="10.5px" fill="#78350F" text-anchor="middle">τ_score = 0.9782</text>
+            <text x="52" y="40" class="body-xs" fill="#B45309" text-anchor="middle">Masked Softmax(:L)</text>
+          </g>
+
+          <path d="M 332 29 L 352 29" class="flow-arrow-amber" marker-end="url(#arrow-amber)" />
+
+          <!-- Box 4: Expected Score -->
+          <g transform="translate(356, 6)">
+            <rect width="125" height="46" rx="3" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1" />
+            <text x="62" y="15" class="label-bold" fill="#92400E" text-anchor="middle">Expected Score</text>
+            <text x="62" y="28" class="math-body" font-size="12px" fill="#B45309" text-anchor="middle">ŷ = ∑ l · p_l</text>
+            <text x="62" y="40" class="body-xs" fill="#78350F" text-anchor="middle">p_l = Softmax(z_l / τ)</text>
+          </g>
+
+          <!-- Callout: Ordinal Loss -->
+          <g transform="translate(490, 4)">
+            <rect width="242" height="50" rx="3" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.8" />
+            <text x="8" y="13" class="label-bold">Metric-Aware Joint Ordinal Loss:</text>
+            <text x="8" y="24" class="math-body" font-size="10px" fill="#92400E">Loss = Loss_Gauss(σ=0.65) + γ · EMD</text>
+            <text x="8" y="35" class="body-xs">• EMD: Cumulative Distribution (CDF) L1 distance</text>
+            <text x="8" y="46" class="body-xs" fill="#059669" font-weight="bold">✓ Penalizes metric distance, not nominal error</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- COLUMN B: MODE B (DYNAMIC POINTER) -->
+    <g transform="translate(805, 38)">
+      <rect width="780" height="260" rx="5" fill="#F0F7FF" stroke="#BAE6FD" stroke-width="1" />
+      <text x="14" y="18" class="card-title" fill="#0369A1">Mode B: Dynamic In-Context Candidate Pointer (Open-Ended Choice)</text>
+      <text x="765" y="18" class="card-subtitle" fill="#075985" text-anchor="end">Resolves Coordinate Identity Crisis</text>
+
+      <g transform="translate(14, 28)">
+        <!-- Breakthrough banner -->
+        <rect width="752" height="34" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="0.8" />
+        <text x="10" y="14" class="label-bold" fill="#0369A1">Key Architectural Breakthrough: In-Context Key Matching vs. Static Slots</text>
+        <text x="10" y="27" class="body-xs">
+          Static heads fail on open-ended choices because slot 0 has no permanent meaning across prompts. Mode B projects candidates to semantic keys k_i.
+        </text>
+
+        <!-- Dynamic Pointer Graph -->
+        <g transform="translate(0, 42)">
+          <!-- Left: Projections -->
+          <g transform="translate(0, 0)">
+            <!-- Query -->
+            <g transform="translate(0, 0)">
+              <rect width="180" height="66" rx="4" fill="#FFFFFF" stroke="#93C5FD" stroke-width="0.8" />
+              <text x="10" y="15" class="label-bold" fill="#1E40AF">Decision Query Vector q</text>
+              <text x="10" y="30" class="math-body" font-size="11px" fill="#0F172A">q = W_Q · h_decide</text>
+              <text x="10" y="45" class="body-xs">W_Q ∈ ℝ^(512 × 1536) (no bias)</text>
+              <text x="10" y="58" class="label-bold" fill="#2563EB" font-size="8.5px">q ∈ ℝ^(1 × 512)</text>
+            </g>
+            <!-- Keys -->
+            <g transform="translate(0, 74)">
+              <rect width="180" height="74" rx="4" fill="#FFFFFF" stroke="#93C5FD" stroke-width="0.8" />
+              <text x="10" y="15" class="label-bold" fill="#1E40AF">Candidate Keys Matrix K</text>
+              <text x="10" y="30" class="math-body" font-size="11px" fill="#0F172A">k_i = W_K · e_i</text>
+              <text x="10" y="44" class="body-xs">W_K ∈ ℝ^(512 × 1536) (no bias)</text>
+              <text x="10" y="57" class="label-bold" fill="#2563EB" font-size="8.5px">K ∈ ℝ^(K × 512)</text>
+              <text x="10" y="69" class="body-xs" fill="#059669" font-weight="bold">✓ Dynamic K (Any candidate count)</text>
+            </g>
+          </g>
+
+          <!-- Arrows into Dot Product -->
+          <path d="M 184 33 L 222 60" class="flow-arrow-blue" marker-end="url(#arrow-blue)" />
+          <path d="M 184 110 L 222 84" class="flow-arrow-blue" marker-end="url(#arrow-blue)" />
+
+          <!-- Center: Scaled Dot Product -->
+          <g transform="translate(228, 38)">
+            <rect width="185" height="72" rx="4" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.2" />
+            <rect width="185" height="18" rx="4" fill="#DBEAFE" />
+            <text x="92" y="13" class="label-bold" fill="#1E40AF" text-anchor="middle">Scaled Dot-Product Pointer</text>
+            <text x="92" y="35" class="math-body" font-size="11.5px" fill="#1E3A8A" text-anchor="middle">s_i = (q · k_iᵀ) / √d_proj + b_i</text>
+            <text x="92" y="49" class="body-xs" fill="#2563EB" text-anchor="middle">d_proj = 512 · scale = 1/√512 ≈ 0.0442</text>
+            <text x="92" y="63" class="label-bold" fill="#1D4ED8" font-size="8px" text-anchor="middle">Logits Vector s ∈ ℝ^K</text>
+          </g>
+
+          <!-- Arrow to Softmax -->
+          <path d="M 416 74 L 440 74" class="flow-arrow-blue" marker-end="url(#arrow-blue)" />
+
+          <!-- Softmax -->
+          <g transform="translate(444, 38)">
+            <rect width="130" height="72" rx="4" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1" />
+            <text x="65" y="16" class="label-bold" fill="#1E40AF" text-anchor="middle">Temperature Softmax</text>
+            <text x="65" y="32" class="math-body" font-size="10.5px" fill="#2563EB" text-anchor="middle">τ_choice = 0.9544</text>
+            <text x="65" y="47" class="math-body" font-size="10px" fill="#0F172A" text-anchor="middle">p_i = exp(s_i / τ) / ∑ exp</text>
+            <text x="65" y="63" class="label-bold" fill="#059669" font-size="8.5px" text-anchor="middle">p ∈ Δ^(K-1) (Simplex)</text>
+          </g>
+
+          <!-- Arrow to Mini Chart -->
+          <path d="M 577 74 L 600 74" class="flow-arrow-emerald" marker-end="url(#arrow-emerald)" />
+
+          <!-- Mini Chart -->
+          <g transform="translate(604, 18)">
+            <rect width="140" height="122" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+            <text x="8" y="15" class="label-bold">P(Choice) Distribution</text>
+
+            <g transform="translate(14, 28)">
+              <!-- Bar 0 -->
+              <rect x="0" y="5" width="16" height="52" rx="1.5" fill="#2563EB" />
+              <text x="8" y="69" class="body-xs" text-anchor="middle">c_0</text>
+              <text x="8" y="2" class="label-bold" fill="#2563EB" font-size="7.5px" text-anchor="middle">0.84</text>
+
+              <!-- Bar 1 -->
+              <rect x="25" y="45" width="16" height="12" rx="1.5" fill="#93C5FD" />
+              <text x="33" y="69" class="body-xs" text-anchor="middle">c_1</text>
+              <text x="33" y="42" class="body-xs" font-size="7px" text-anchor="middle">0.09</text>
+
+              <!-- Bar 2 -->
+              <rect x="50" y="51" width="16" height="6" rx="1.5" fill="#93C5FD" />
+              <text x="58" y="69" class="body-xs" text-anchor="middle">c_2</text>
+              <text x="58" y="48" class="body-xs" font-size="7px" text-anchor="middle">0.05</text>
+
+              <!-- Bar 3 -->
+              <rect x="75" y="54" width="16" height="3" rx="1.5" fill="#93C5FD" />
+              <text x="83" y="69" class="body-xs" text-anchor="middle">c_3</text>
+              <text x="83" y="51" class="body-xs" font-size="7px" text-anchor="middle">0.02</text>
+
+              <line x1="-4" y1="58" x2="100" y2="58" stroke="#94A3B8" stroke-width="0.8" />
+            </g>
+
+            <text x="8" y="112" class="body-xs" fill="#059669" font-weight="bold">InfoNCE + Label Smooth</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flow Connector: Stage 4 -> Stage 5 -->
+  <path d="M 840 922 L 840 948" class="flow-arrow" marker-end="url(#arrow-slate)" />
+  <rect x="735" y="928" width="210" height="16" rx="3" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8" />
+  <text x="840" y="940" class="label-bold" fill="#475569" text-anchor="middle">Deterministic Production Outputs</text>
+
+  <!-- ========================================================================= -->
+  <!-- STAGE 5: DETERMINISTIC PRODUCTION OUTPUTS & EMPIRICAL BENCHMARKS -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 950)">
+    <rect width="1600" height="170" class="panel-border" />
+    <path d="M 0 8 Q 0 0 8 0 L 1592 0 Q 1600 0 1600 8 L 1600 28 L 0 28 Z" class="panel-header" />
+    
+    <text x="14" y="19" class="stage-tag" fill="#0F172A">Stage 5</text>
+    <text x="80" y="19" class="stage-title">Deterministic Operational Outputs, Loss Mechanics &amp; Empirical Benchmarks</text>
+    <text x="1585" y="19" class="stage-desc" text-anchor="end">Evaluated on 28k multi-domain samples across 15 tasks (Banking77, CLINC150, MNLI, SNLI, UNFAIR-ToS, SummEval)</text>
+
+    <g transform="translate(14, 38)">
+      <!-- Panel 5.1: Choice -->
+      <g transform="translate(0, 0)">
+        <rect width="375" height="120" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+        <rect width="375" height="20" rx="5" fill="#EFF6FF" />
+        <text x="12" y="14" class="label-bold" fill="#1E40AF">CHOICE: Dynamic Candidate Pointer</text>
+
+        <g transform="translate(12, 28)">
+          <text x="0" y="14" class="body-sm">Output: P(Choice = k) ∈ Δ^(K-1)</text>
+          <text x="0" y="28" class="body-xs">Loss: InfoNCE with Label Smoothing (ε = 0.05)</text>
+          <text x="0" y="42" class="body-xs">Mitigation: Dynamic Option-Key Permutation</text>
+
+          <rect y="48" width="350" height="38" rx="3" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="0.8" />
+          <text x="14" y="62" class="body-xs">Validation Accuracy:</text>
+          <text x="14" y="79" class="label-bold" font-size="13px" fill="#1D4ED8">94.04%</text>
+
+          <text x="180" y="62" class="body-xs">Held-Out Test Accuracy:</text>
+          <text x="180" y="79" class="label-bold" font-size="13px" fill="#1D4ED8">93.37%</text>
+        </g>
+      </g>
+
+      <!-- Panel 5.2: Noul -->
+      <g transform="translate(390, 0)">
+        <rect width="375" height="120" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+        <rect width="375" height="20" rx="5" fill="#ECFDF5" />
+        <text x="12" y="14" class="label-bold" fill="#065F46">NOUL: Calibrated Binary Prototype</text>
+
+        <g transform="translate(12, 28)">
+          <text x="0" y="14" class="body-sm">Output: P(Yes) ∈ [0, 1] (Calibrated Posterior)</text>
+          <text x="0" y="28" class="body-xs">Loss: Binary Cross-Entropy + Temp Scaler (τ = 1.083)</text>
+          <text x="0" y="42" class="body-xs">Sparsity Defense: Dynamic Multi-Label Threshold (0.82)</text>
+
+          <rect y="48" width="350" height="38" rx="3" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="0.8" />
+          <text x="14" y="62" class="body-xs">Validation Accuracy:</text>
+          <text x="14" y="79" class="label-bold" font-size="13px" fill="#047857">91.56%</text>
+
+          <text x="180" y="62" class="body-xs">Held-Out Test Accuracy:</text>
+          <text x="180" y="79" class="label-bold" font-size="13px" fill="#047857">90.78%</text>
+        </g>
+      </g>
+
+      <!-- Panel 5.3: Score -->
+      <g transform="translate(780, 0)">
+        <rect width="375" height="120" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+        <rect width="375" height="20" rx="5" fill="#FEF3C7" />
+        <text x="12" y="14" class="label-bold" fill="#92400E">SCORE: Metric-Aware Ordinal Rubric</text>
+
+        <g transform="translate(12, 28)">
+          <text x="0" y="14" class="body-sm">Output: ŷ_score = ∑ l · p_l (Active L Levels)</text>
+          <text x="0" y="28" class="body-xs">Loss: 1-Wasserstein (EMD) + Bilateral Gaussian CE</text>
+          <text x="0" y="42" class="body-xs">Advantage: Distance-penalized metric grading</text>
+
+          <rect y="48" width="350" height="38" rx="3" fill="#FFFFFF" stroke="#FDE68A" stroke-width="0.8" />
+          <text x="14" y="62" class="body-xs">Validation MAE:</text>
+          <text x="14" y="79" class="label-bold" font-size="13px" fill="#B45309">0.92 levels</text>
+
+          <text x="180" y="62" class="body-xs">Held-Out Test MAE:</text>
+          <text x="180" y="79" class="label-bold" font-size="13px" fill="#B45309">0.90 levels</text>
+        </g>
+      </g>
+
+      <!-- Panel 5.4: Reliability -->
+      <g transform="translate(1170, 0)">
+        <rect width="400" height="120" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+        <rect width="400" height="20" rx="5" fill="#F1F5F9" />
+        <text x="12" y="14" class="label-bold" fill="#0F172A">Production Systems Guarantees</text>
+
+        <g transform="translate(12, 28)">
+          <text x="0" y="14" class="body-sm">• End-to-End Latency: 15–35 ms (vs 1500ms LLM)</text>
+          <text x="0" y="28" class="body-sm">• Syntax Parsing Failures: 0.00% (Zero regex)</text>
+          <text x="0" y="42" class="body-sm">• Total GPU VRAM: &lt; 2.0 GB (Fits RTX 2050)</text>
+          <text x="0" y="56" class="body-sm">• Entropy Regularizer: β · 𝔼[∑ p log p]</text>
+
+          <rect y="64" width="376" height="24" rx="3" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="0.8" />
+          <text x="188" y="80" class="label-bold" fill="#065F46" text-anchor="middle">✓ Deterministic · Calibrated · Non-Autoregressive</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Paper Figure Caption -->
+  <g transform="translate(40, 1135)">
+    <text x="0" y="14" class="body-xs" fill="#475569">
+      Figure 1 | End-to-end architecture and operational data flow of the JEV System One decision engine. Unlike autoregressive LLMs that execute dozens of sequential decoding steps,
+    </text>
+    <text x="0" y="28" class="body-xs" fill="#475569">
+      JEV evaluates structured operational decisions in a single forward prefill pass over input state S and typed query Q. Excising the 151k-dimension LM head reclaims ~778 MB VRAM
+    </text>
+    <text x="0" y="42" class="body-xs" fill="#475569">
+      and brings operational footprint under 2.0 GB. The Dual-Mode Head decouples invariant binary/ordinal anchors (Mode A) from open-ended in-context candidate pointer representations (Mode B),
+    </text>
+    <text x="0" y="56" class="body-xs" fill="#475569">
+      completely eliminating coordinate and positional bias while outputting calibrated probabilities.
+    </text>
+  </g>
+</svg>

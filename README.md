@@ -80,6 +80,13 @@ JEV supports three fundamental decision primitives designed for deterministic pi
 
 ## Architecture & Data Flow
 
+<p align="center">
+  <img src="architecture.svg" alt="JEV System One Architecture & Operational Data Flow" width="100%">
+</p>
+
+<details>
+<summary><b>Click to expand Textual Flowchart (Mermaid)</b></summary>
+
 ```mermaid
 flowchart TD
     subgraph Input["1. Input Ingestion"]
@@ -115,6 +122,8 @@ flowchart TD
     end
 ```
 
+</details>
+
 ---
 
 ## Repository Structure
@@ -124,6 +133,7 @@ jev-open-source/
 ├── .gitignore                        # Git exclusion patterns (ignores weights, datasets, logs)
 ├── LICENSE                           # Apache 2.0 open-source license
 ├── README.md                         # Project documentation and quickstart guide
+├── architecture.svg                  # Publication-grade System One architecture & data flow
 ├── requirements.txt                  # Python dependencies
 ├── pytest.ini                        # Pytest runner configuration
 ├── dataset_automation.py             # Curates the 26k-sample multi-domain training dataset
