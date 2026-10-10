@@ -121,37 +121,43 @@ flowchart TD
 
 ```
 jev-open-source/
-├── .gitignore                        # Git exclusion rules (ignores checkpoints, datasets, caches)
-├── LICENSE                           # Apache 2.0 License
+├── .gitignore                        # Git exclusion patterns (ignores weights, datasets, logs)
+├── LICENSE                           # Apache 2.0 open-source license
 ├── README.md                         # Project documentation and quickstart guide
 ├── requirements.txt                  # Python dependencies
 ├── pytest.ini                        # Pytest runner configuration
-├── fine_tuning_engine.py             # 5-layer execution engine, collator, models, and losses
-├── train.py                          # Production training entry point with early stopping
-├── dataset_automation.py             # Multi-domain dataset curation pipeline (26k train samples)
-├── test_dataset_automation.py        # Test dataset curation, zero-contamination auditor, and evaluation runner
-├── docs/                             # Technical specifications & hardware profiling (*.md)
-│   ├── fine_tuning_methodology.md    # Full architectural and mathematical specification
-│   ├── qwen2.5_1.5b_hardware_feasibility.md  # Hardware profiling on 4GB VRAM
-│   └── unslothXdual-hybrid.md        # Triton kernel acceleration notes
-└── tests/                            # Comprehensive pytest test suite (52 tests across 11 files)
-    ├── test_banking77_labels.py
-    ├── test_checkpoint_and_smoke.py
-    ├── test_cuda_and_collator_bugs.py
-    ├── test_dataset_bugs.py
-    ├── test_early_stopping.py
-    ├── test_fine_tuning_engine.py
-    ├── test_freeze_bug.py
-    ├── test_lm_head_excision.py
-    ├── test_loss_logging_and_validation.py
-    ├── test_regression.py
-    ├── test_test_dataset_automation.py
-    └── test_train_system_one.py
-
-# Generated locally during data curation and training (excluded by .gitignore):
-├── data/                             # Curated datasets (decision_train_26k.jsonl, decision_test_2.6k.jsonl)
-├── system_one_model/                 # Checkpoints and exported artifacts (safetensors, LoRA adapters)
-└── logs/                             # Local training run execution logs
+├── dataset_automation.py             # Curates the 26k-sample multi-domain training dataset
+├── test_dataset_automation.py        # Curates test set, audits contamination, runs evaluation
+├── train.py                          # Training pipeline with early stopping & checkpointing
+├── fine_tuning_engine.py             # 5-layer System One engine, collator, heads, and losses
+├── docs/                             # Architecture specifications & hardware feasibility
+│   ├── fine_tuning_methodology.md    # Production architectural blueprint & loss mechanics
+│   ├── qwen2.5_1.5b_hardware_feasibility.md # 4GB VRAM hardware profiling on RTX 2050
+│   └── unslothXdual-hybrid.md        # Triton autograd & hybrid execution core
+├── tests/                            # Comprehensive test suite (52 tests across 11 modules)
+│   ├── test_banking77_labels.py
+│   ├── test_checkpoint_and_smoke.py
+│   ├── test_cuda_and_collator_bugs.py
+│   ├── test_dataset_bugs.py
+│   ├── test_early_stopping.py
+│   ├── test_fine_tuning_engine.py
+│   ├── test_freeze_bug.py
+│   ├── test_lm_head_excision.py
+│   ├── test_loss_logging_and_validation.py
+│   ├── test_regression.py
+│   ├── test_test_dataset_automation.py
+│   └── test_train_system_one.py
+│
+├── data/                             # [Local / Generated — ignored by git]
+│   ├── decision_train_26k.jsonl      # Curated via python dataset_automation.py
+│   └── decision_test_2.6k.jsonl      # Curated via python test_dataset_automation.py
+├── system_one_model/                 # [Local / Generated — ignored by git]
+│   ├── decision_config.json          # Production config & fitted temperatures
+│   ├── hybrid_head.safetensors       # Trained dual-mode decision head weights
+│   ├── lora_adapters/                # Trained LoRA adapters
+│   └── checkpoint-*/                 # Periodic training checkpoints
+└── logs/                             # [Local / Generated — ignored by git]
+    └── training_run.log              # Local training execution logs
 ```
 
 ---
