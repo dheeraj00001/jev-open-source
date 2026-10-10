@@ -37,7 +37,8 @@ from fine_tuning_engine import (
 def parse_args():
     parser = argparse.ArgumentParser(description="System One Decision Engine Fine-Tuning")
     parser.add_argument("--base_model", type=str, default="Qwen/Qwen2.5-1.5B-Instruct")
-    parser.add_argument("--data_path", type=str, default="decision_train_26k.jsonl")
+    default_data_path = "data/decision_train_26k.jsonl" if os.path.exists("data/decision_train_26k.jsonl") else "decision_train_26k.jsonl"
+    parser.add_argument("--data_path", type=str, default=default_data_path)
     parser.add_argument("--output_dir", type=str, default="./system_one_model")
     parser.add_argument("--epochs", type=int, default=3)
     parser.add_argument("--grad_accum", type=int, default=16)

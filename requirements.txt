@@ -1,0 +1,13 @@
+# Core Deep Learning & NLP
+torch>=2.2.0
+transformers>=4.40.0
+datasets>=2.18.0
+peft>=0.10.0
+safetensors>=0.4.0
+accelerate>=0.28.0
+
+# Efficient Training & Quantization
+bitsandbytes>=0.43.0
+
+# Testing & Quality Assurance
+pytest>=8.0.0

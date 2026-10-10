@@ -1,11 +1,27 @@
+# Python bytecode & cache
 __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
+
+# Model checkpoints & weights
 system_one_model/
-*.log
 *.pt
 *.safetensors
 *.bin
+
+# Data files & logs
 *.jsonl
+*.log
+logs/
+
+# Documents & papers
 *.pdf
+
+# Environment & IDE
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+.DS_Store

@@ -282,8 +282,8 @@ def add_test_dataset(
 # ==============================================================================
 
 def build_test_dataset(
-    train_path: str = "decision_train_26k.jsonl",
-    output_file: str = "decision_test_2.6k.jsonl",
+    train_path: str = "data/decision_train_26k.jsonl" if os.path.exists("data/decision_train_26k.jsonl") else "decision_train_26k.jsonl",
+    output_file: str = "data/decision_test_2.6k.jsonl" if os.path.isdir("data") else "decision_test_2.6k.jsonl",
     seed: int = SEED_TEST,
 ) -> List[dict]:
     random.seed(seed)
@@ -832,7 +832,7 @@ def verify_zero_overlap(train_path: str, test_path: str) -> Dict[str, Any]:
 
 def evaluate_test_dataset_with_model(
     model_dir: str = "./system_one_model",
-    test_path: str = "decision_test_2.6k.jsonl",
+    test_path: str = "data/decision_test_2.6k.jsonl" if os.path.exists("data/decision_test_2.6k.jsonl") else "decision_test_2.6k.jsonl",
     device: str = "cuda",
 ) -> Dict[str, float]:
     """
@@ -923,8 +923,10 @@ def evaluate_test_dataset_with_model(
 
 def main():
     parser = argparse.ArgumentParser(description="System One Test Dataset Automation & Verification")
-    parser.add_argument("--train_path", type=str, default="decision_train_26k.jsonl", help="Path to training jsonl")
-    parser.add_argument("--output_file", type=str, default="decision_test_2.6k.jsonl", help="Output test jsonl path")
+    default_train = "data/decision_train_26k.jsonl" if os.path.exists("data/decision_train_26k.jsonl") else "decision_train_26k.jsonl"
+    default_output = "data/decision_test_2.6k.jsonl" if os.path.isdir("data") else "decision_test_2.6k.jsonl"
+    parser.add_argument("--train_path", type=str, default=default_train, help="Path to training jsonl")
+    parser.add_argument("--output_file", type=str, default=default_output, help="Output test jsonl path")
     parser.add_argument("--seed", type=int, default=SEED_TEST, help="Random seed for test sampling")
     parser.add_argument("--verify_only", action="store_true", help="Only verify existing test file against train file")
     parser.add_argument("--evaluate_model_dir", type=str, default=None, help="Optional model directory to evaluate on test dataset")

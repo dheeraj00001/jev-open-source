@@ -12,7 +12,7 @@ import os
 import pytest
 from collections import defaultdict
 
-DATASET_PATH = "decision_train_26k.jsonl"
+DATASET_PATH = "data/decision_train_26k.jsonl" if os.path.exists("data/decision_train_26k.jsonl") else "decision_train_26k.jsonl"
 
 
 @pytest.fixture(scope="module")

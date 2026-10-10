@@ -170,7 +170,7 @@ def test_bnb_adamw8bit_checkpoint_resume_and_step():
         # Restore into a new optimizer
         new_p = nn.Parameter(torch.randn(8960, 32, device="cuda"))
         new_opt = bnb.optim.AdamW8bit([new_p], lr=1e-4)
-        loaded = torch.load(ckpt_file, map_location="cuda")
+        loaded = torch.load(ckpt_file, map_location="cuda", weights_only=False)
         new_opt.load_state_dict(loaded["optimizer_state_dict"])
 
         # Execute step after resumption

@@ -8,12 +8,13 @@ Output:
     decision_train_26k.jsonl
 """
 
+import os
 import json
 import random
 from datasets import load_dataset
 
 SEED = 42
-OUTPUT_FILE = "decision_train_26k.jsonl"
+OUTPUT_FILE = "data/decision_train_26k.jsonl" if os.path.isdir("data") else "decision_train_26k.jsonl"
 
 random.seed(SEED)
 
